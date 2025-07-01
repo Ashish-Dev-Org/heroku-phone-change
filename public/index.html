@@ -32,10 +32,12 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      margin-bottom: 40px; /* Add space below the org chart */
     }
     .team-member {
       text-align: center;
       margin: 20px;
+      width: 200px;
     }
     .team-member img {
       width: 120px;
@@ -53,6 +55,29 @@
       margin: 0;
       color: #777;
     }
+    .capabilities-section {
+      background-color: #fafafa;
+      padding: 30px;
+      border-radius: 8px;
+      border: 1px solid #e3e3e3;
+    }
+    .capabilities-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .capabilities-list li {
+      font-size: 16px;
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .capabilities-list li:last-child {
+      border-bottom: none;
+    }
+    .capabilities-list strong {
+      color: #333;
+      display: inline-block;
+      width: 180px;
+    }
   </style>
 </head>
 <body>
@@ -65,7 +90,6 @@
 
   <div class="container">
 
-    <!-- India Team Lead Info -->
     <div class="section-title text-center">
       <h2>India Team</h2>
       <p>Meet our leadership and talented team members</p>
@@ -77,42 +101,47 @@
       <p>Director, Services Practice – India Team</p>
     </div>
 
-    <!-- Org Structure -->
     <div class="section-title text-center">
       <h3>Organization Structure</h3>
     </div>
 
     <div class="org-chart">
-      <!-- Team Member 1 -->
       <div class="team-member">
         <img src="https://ca.slack-edge.com/E7T5PNK3P-U0745HX5D9S-de939d151113-512" alt="jay" class="img-circle" width="150" height="150">
         <h5>Jay Pandit</h5>
         <p>Senior Tech Architect</p>
       </div>
-      <!-- Team Member 2 -->
       <div class="team-member">
         <img src="https://ca.slack-edge.com/E7T5PNK3P-U02UHJ0L3A7-42a174ff79a4-512" alt="Amit" class="img-circle" width="150" height="150">
         <h5>Amit Majoomdar</h5>
         <p>Senior Tech Architect</p>
       </div>
-      <!-- Team Member 3 -->
       <div class="team-member">
         <img src="https://ca.slack-edge.com/E7T5PNK3P-U0110D0DE69-8c1e1269e9a4-512" alt="Shubham" class="img-circle" width="150" height="150">
         <h5>Shubham Gupta</h5>
         <p>Senior Tech Architect</p>
       </div>
-      <!-- Team Member 4 -->
       <div class="team-member">
         <img src="https://ca.slack-edge.com/E7T5PNK3P-U02T71F7X8R-ed316dbb43db-512" alt="Nil" class="img-circle" width="150" height="150">
         <h5>Nilanjan M</h5>
-        <p>Senior Tech Architect</p>
+        <p>Tech Architect</p>
       </div>
-   
+    </div>
+
+    <div class="section-title text-center">
+        <h3>Cloud Capabilities</h3>
+    </div>
+    <div class="capabilities-section">
+        <ul class="capabilities-list">
+            <li><strong>Ashish Tondare:</strong> Overseeing Multi-Cloud Strategy & Enterprise Adoption</li>
+            <li><strong>Jay Pandit:</strong> GCP, AWS, AI/ML Platforms</li>
+            <li><strong>Amit Majoomdar:</strong> Azure, Multi-Cloud Security</li>
+            <li><strong>Shubham Gupta:</strong> AWS, Data Analytics, Serverless</li>
+            <li><strong>Nilanjan M:</strong> Kubernetes, Terraform, GCP</li>
+        </ul>
     </div>
 
   </div>
 
 </body>
 </html>
-
-
