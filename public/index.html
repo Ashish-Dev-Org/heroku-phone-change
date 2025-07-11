@@ -2,146 +2,390 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>APAC Emerging Clouds Team</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+  <title>APAC Emerging Clouds Team</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
   <style>
+    :root {
+      --primary-color: #2563eb;
+      --secondary-color: #1e40af;
+      --accent-color: #3b82f6;
+      --text-primary: #1f2937;
+      --text-secondary: #6b7280;
+      --bg-light: #f8fafc;
+      --bg-white: #ffffff;
+      --border-color: #e5e7eb;
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      padding-top: 60px;
-      font-family: 'Helvetica Neue', sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: var(--text-primary);
+      background-color: var(--bg-light);
     }
-    .navbar-inverse {
-      background-color: #004080;
-      border-color: #003366;
+
+    /* Navbar Styling */
+    .navbar {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      box-shadow: var(--shadow-md);
+      padding: 1rem 0;
     }
-    .navbar-inverse .navbar-brand {
+
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: white !important;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
       color: white;
+      padding: 4rem 0;
+      text-align: center;
+      margin-bottom: 3rem;
     }
+
+    .hero-title {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      opacity: 0.9;
+      font-weight: 400;
+    }
+
+    /* Section Styling */
+    .section {
+      padding: 3rem 0;
+    }
+
     .section-title {
-      margin-top: 40px;
-      margin-bottom: 20px;
+      text-align: center;
+      margin-bottom: 3rem;
     }
+
+    .section-title h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+    }
+
+    .section-title p {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Leader Card */
     .leader-card {
-      background: #f5f5f5;
-      padding: 20px;
-      border-radius: 8px;
-      margin-bottom: 30px;
+      background: var(--bg-white);
+      border-radius: 16px;
+      padding: 3rem;
       text-align: center;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border-color);
+      max-width: 500px;
+      margin: 0 auto 3rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .org-chart {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-bottom: 40px; /* Add space below the org chart */
+
+    .leader-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
     }
-    .team-member {
-      text-align: center;
-      margin: 20px;
+
+    .leader-card img {
       width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--accent-color);
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow-md);
     }
+
+    .leader-card h3 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .leader-card p {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    /* Team Members Grid */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .team-member {
+      background: var(--bg-white);
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-color);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .team-member:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+
     .team-member img {
       width: 120px;
       height: 120px;
       border-radius: 50%;
       object-fit: cover;
-      border: 2px solid #ccc;
+      border: 3px solid var(--accent-color);
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow-sm);
     }
+
     .team-member h5 {
-      margin-top: 10px;
-      margin-bottom: 5px;
-      font-weight: bold;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
     }
+
     .team-member p {
-      margin: 0;
-      color: #777;
+      color: var(--text-secondary);
+      font-weight: 500;
     }
+
+    /* Capabilities Section */
     .capabilities-section {
-      background-color: #fafafa;
-      padding: 30px;
-      border-radius: 8px;
-      border: 1px solid #e3e3e3;
+      background: var(--bg-white);
+      border-radius: 16px;
+      padding: 3rem;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-color);
     }
+
     .capabilities-list {
       list-style: none;
-      padding-left: 0;
+      padding: 0;
     }
+
     .capabilities-list li {
-      font-size: 16px;
-      padding: 10px 0;
-      border-bottom: 1px solid #eee;
+      display: flex;
+      align-items: center;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border-color);
+      font-size: 1.125rem;
     }
+
     .capabilities-list li:last-child {
       border-bottom: none;
     }
+
     .capabilities-list strong {
-      color: #333;
-      display: inline-block;
-      width: 180px;
+      color: var(--text-primary);
+      font-weight: 600;
+      min-width: 200px;
+      margin-right: 1rem;
+    }
+
+    .capabilities-list span {
+      color: var(--text-secondary);
+      flex: 1;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+      
+      .section-title h2 {
+        font-size: 2rem;
+      }
+      
+      .leader-card {
+        padding: 2rem;
+      }
+      
+      .team-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      
+      .capabilities-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+      
+      .capabilities-list strong {
+        min-width: auto;
+        margin-right: 0;
+      }
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in-up {
+      animation: fadeInUp 0.6s ease-out;
     }
   </style>
 </head>
 <body>
-
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">APAC Emerging Clouds</a>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <i class="fas fa-cloud me-2"></i>
+        APAC Emerging Clouds
+      </a>
     </div>
   </nav>
 
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <h1 class="hero-title fade-in-up">India Team</h1>
+      <p class="hero-subtitle fade-in-up">Meet our leadership and talented team members</p>
+    </div>
+  </section>
+
   <div class="container">
-
-    <div class="section-title text-center">
-      <h2>India Team</h2>
-      <p>Meet our leadership and talented team members</p>
-    </div>
-
-    <div class="leader-card">
-      <img src="https://ca.slack-edge.com/E7T5PNK3P-U01D9QZP4RZ-a569cbf197aa-512" alt="Ashish Tondare" class="img-circle" width="200" height="200">
-      <h3>Ashish Tondare</h3>
-      <p>Director, Services Practice – India Team</p>
-    </div>
-
-    <div class="section-title text-center">
-      <h3>Organization Structure</h3>
-    </div>
-
-    <div class="org-chart">
-      <div class="team-member">
-        <img src="https://ca.slack-edge.com/E7T5PNK3P-U0745HX5D9S-de939d151113-512" alt="jay" class="img-circle" width="150" height="150">
-        <h5>Jay Pandit</h5>
-        <p>Senior Tech Architect</p>
+    <!-- Leader Section -->
+    <section class="section">
+      <div class="leader-card fade-in-up">
+        <img src="https://ca.slack-edge.com/E7T5PNK3P-U01D9QZP4RZ-a569cbf197aa-512" alt="Ashish Tondare">
+        <h3>Ashish Tondare</h3>
+        <p>Director, Services Practice – India Team</p>
       </div>
-      <div class="team-member">
-        <img src="https://ca.slack-edge.com/E7T5PNK3P-U02UHJ0L3A7-42a174ff79a4-512" alt="Amit" class="img-circle" width="150" height="150">
-        <h5>Amit Majoomdar</h5>
-        <p>Senior Tech Architect</p>
-      </div>
-      <div class="team-member">
-        <img src="https://ca.slack-edge.com/E7T5PNK3P-U0110D0DE69-8c1e1269e9a4-512" alt="Shubham" class="img-circle" width="150" height="150">
-        <h5>Shubham Gupta</h5>
-        <p>Senior Tech Architect</p>
-      </div>
-      <div class="team-member">
-        <img src="https://ca.slack-edge.com/E7T5PNK3P-U02T71F7X8R-ed316dbb43db-512" alt="Nil" class="img-circle" width="150" height="150">
-        <h5>Nilanjan M</h5>
-        <p>Tech Architect</p>
-      </div>
-    </div>
+    </section>
 
-    <div class="section-title text-center">
-        <h3>Cloud Capabilities</h3>
-    </div>
-    <div class="capabilities-section">
+    <!-- Organization Structure -->
+    <section class="section">
+      <div class="section-title">
+        <h2>Organization Structure</h2>
+        <p>Our talented team of cloud architects and specialists</p>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-member fade-in-up">
+          <img src="https://ca.slack-edge.com/E7T5PNK3P-U0745HX5D9S-de939d151113-512" alt="Jay Pandit">
+          <h5>Jay Pandit</h5>
+          <p>Senior Tech Architect</p>
+        </div>
+        
+        <div class="team-member fade-in-up">
+          <img src="https://ca.slack-edge.com/E7T5PNK3P-U02UHJ0L3A7-42a174ff79a4-512" alt="Amit Majoomdar">
+          <h5>Amit Majoomdar</h5>
+          <p>Senior Tech Architect</p>
+        </div>
+        
+        <div class="team-member fade-in-up">
+          <img src="https://ca.slack-edge.com/E7T5PNK3P-U0110D0DE69-8c1e1269e9a4-512" alt="Shubham Gupta">
+          <h5>Shubham Gupta</h5>
+          <p>Senior Tech Architect</p>
+        </div>
+        
+        <div class="team-member fade-in-up">
+          <img src="https://ca.slack-edge.com/E7T5PNK3P-U02T71F7X8R-ed316dbb43db-512" alt="Nilanjan M">
+          <h5>Nilanjan M</h5>
+          <p>Tech Architect</p>
+        </div>
+        
+        <div class="team-member fade-in-up">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="Rahul Sharma">
+          <h5>Rahul Sharma</h5>
+          <p>Cloud Solutions Architect</p>
+        </div>
+        
+        <div class="team-member fade-in-up">
+          <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face" alt="Priya Patel">
+          <h5>Priya Patel</h5>
+          <p>DevOps Engineer</p>
+        </div>
+        
+        <div class="team-member fade-in-up">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face" alt="Vikram Singh">
+          <h5>Vikram Singh</h5>
+          <p>Cloud Security Specialist</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cloud Capabilities -->
+    <section class="section">
+      <div class="section-title">
+        <h2>Cloud Capabilities</h2>
+        <p>Our expertise across multiple cloud platforms and technologies</p>
+      </div>
+      
+      <div class="capabilities-section fade-in-up">
         <ul class="capabilities-list">
-            <li><strong>Ashish Tondare:</strong> Overseeing Multi-Cloud Strategy & Enterprise Adoption</li>
-            <li><strong>Jay Pandit:</strong> GCP, AWS, AI/ML Platforms</li>
-            <li><strong>Amit Majoomdar:</strong> Azure, Multi-Cloud Security</li>
-            <li><strong>Shubham Gupta:</strong> AWS, Data Analytics, Serverless</li>
-            <li><strong>Nilanjan M:</strong> Kubernetes, Terraform, GCP</li>
+          <li>
+            <strong>Ashish Tondare:</strong>
+            <span>Overseeing Multi-Cloud Strategy & Enterprise Adoption</span>
+          </li>
+          <li>
+            <strong>Jay Pandit:</strong>
+            <span>GCP, AWS, AI/ML Platforms</span>
+          </li>
+          <li>
+            <strong>Amit Majoomdar:</strong>
+            <span>Azure, Multi-Cloud Security</span>
+          </li>
+          <li>
+            <strong>Shubham Gupta:</strong>
+            <span>AWS, Data Analytics, Serverless</span>
+          </li>
+          <li>
+            <strong>Nilanjan M:</strong>
+            <span>Kubernetes, Terraform, GCP</span>
+          </li>
         </ul>
-    </div>
-
+      </div>
+    </section>
   </div>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
