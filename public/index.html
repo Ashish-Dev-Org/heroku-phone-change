@@ -40,6 +40,30 @@
       background-color: var(--bg-light);
     }
 
+    /* LinkedIn Link Styling */
+    .linkedin-link-top {
+      display: block;
+      width: 100%;
+      background: #0077b5;
+      color: #fff;
+      text-align: center;
+      padding: 0.5rem 0;
+      font-weight: 500;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: background 0.2s;
+      position: relative;
+      z-index: 1051;
+    }
+    .linkedin-link-top:hover, .linkedin-link-top:focus {
+      background: #005983;
+      color: #fff;
+      text-decoration: none;
+    }
+    .linkedin-link-top i {
+      margin-right: 0.5em;
+    }
+
     /* Navbar Styling */
     .navbar {
       background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
@@ -182,6 +206,57 @@
     .team-member p {
       color: var(--text-secondary);
       font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    /* Social Links */
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      color: white;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      font-size: 1.1rem;
+    }
+
+    .social-links a:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .social-links .linkedin {
+      background: #0077b5;
+    }
+
+    .social-links .linkedin:hover {
+      background: #005582;
+    }
+
+    .social-links .twitter {
+      background: #1da1f2;
+    }
+
+    .social-links .twitter:hover {
+      background: #0d8bd9;
+    }
+
+    .social-links .facebook {
+      background: #1877f2;
+    }
+
+    .social-links .facebook:hover {
+      background: #166fe5;
     }
 
     /* Capabilities Section */
@@ -271,6 +346,7 @@
   </style>
 </head>
 <body>
+
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
@@ -306,47 +382,125 @@
         <p>Our talented team of cloud architects and specialists</p>
       </div>
 
+
       <div class="team-grid">
         <div class="team-member fade-in-up">
           <img src="https://ca.slack-edge.com/E7T5PNK3P-U0745HX5D9S-de939d151113-512" alt="Jay Pandit">
           <h5>Jay Pandit</h5>
           <p>Senior Tech Architect</p>
+          <div class="social-links">
+            <a href="https://linkedin.com/in/jaypandit" class="linkedin" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://twitter.com/jaypandit" class="twitter" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://facebook.com/jaypandit" class="facebook" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
         </div>
         
         <div class="team-member fade-in-up">
           <img src="https://ca.slack-edge.com/E7T5PNK3P-U02UHJ0L3A7-42a174ff79a4-512" alt="Amit Majoomdar">
           <h5>Amit Majoomdar</h5>
           <p>Senior Tech Architect</p>
+          <div class="social-links">
+            <a href="https://linkedin.com/in/amitmajoomdar" class="linkedin" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://twitter.com/amitmajoomdar" class="twitter" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://facebook.com/amitmajoomdar" class="facebook" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
         </div>
         
         <div class="team-member fade-in-up">
           <img src="https://ca.slack-edge.com/E7T5PNK3P-U0110D0DE69-8c1e1269e9a4-512" alt="Shubham Gupta">
           <h5>Shubham Gupta</h5>
           <p>Senior Tech Architect</p>
+          <div class="social-links">
+            <a href="https://linkedin.com/in/shubhamgupta" class="linkedin" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://twitter.com/shubhamgupta" class="twitter" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://facebook.com/shubhamgupta" class="facebook" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
         </div>
         
         <div class="team-member fade-in-up">
           <img src="https://ca.slack-edge.com/E7T5PNK3P-U02T71F7X8R-ed316dbb43db-512" alt="Nilanjan M">
           <h5>Nilanjan M</h5>
           <p>Tech Architect</p>
+          <div class="social-links">
+            <a href="https://linkedin.com/in/nilanjanm" class="linkedin" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://twitter.com/nilanjanm" class="twitter" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://facebook.com/nilanjanm" class="facebook" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
         </div>
         
         <div class="team-member fade-in-up">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="Rahul Sharma">
+          <img src="https://ui-avatars.com/api/?name=Rahul+Sharma&background=3b82f6&color=ffffff&size=150&bold=true" alt="Rahul Sharma">
           <h5>Rahul Sharma</h5>
           <p>Cloud Solutions Architect</p>
+          <div class="social-links">
+            <a href="https://linkedin.com/in/rahulsharma" class="linkedin" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://twitter.com/rahulsharma" class="twitter" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://facebook.com/rahulsharma" class="facebook" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
         </div>
         
         <div class="team-member fade-in-up">
-          <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face" alt="Priya Patel">
+          <img src="https://ui-avatars.com/api/?name=Priya+Patel&background=8b5cf6&color=ffffff&size=150&bold=true" alt="Priya Patel">
           <h5>Priya Patel</h5>
           <p>DevOps Engineer</p>
+          <div class="social-links">
+            <a href="https://linkedin.com/in/priyapatel" class="linkedin" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://twitter.com/priyapatel" class="twitter" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://facebook.com/priyapatel" class="facebook" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
         </div>
         
         <div class="team-member fade-in-up">
-          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face" alt="Vikram Singh">
+          <img src="https://ui-avatars.com/api/?name=Vikram+Singh&background=059669&color=ffffff&size=150&bold=true" alt="Vikram Singh">
           <h5>Vikram Singh</h5>
           <p>Cloud Security Specialist</p>
+          <div class="social-links">
+            <a href="https://linkedin.com/in/vikramsingh" class="linkedin" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://twitter.com/vikramsingh" class="twitter" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://facebook.com/vikramsingh" class="facebook" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -379,6 +533,18 @@
           <li>
             <strong>Nilanjan M:</strong>
             <span>Kubernetes, Terraform, GCP</span>
+          </li>
+          <li>
+            <strong>Rahul Sharma:</strong>
+            <span>Cloud Architecture Design, Solution Optimization</span>
+          </li>
+          <li>
+            <strong>Priya Patel:</strong>
+            <span>CI/CD Pipelines, Infrastructure Automation, Docker</span>
+          </li>
+          <li>
+            <strong>Vikram Singh:</strong>
+            <span>Cloud Security, Compliance, Identity Management</span>
           </li>
         </ul>
       </div>
